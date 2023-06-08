@@ -1,0 +1,5 @@
+sudo apt-get install haskell-platform;
+git clone --recursive https://github.com/B-Lang-org/bsc;
+cd bsc;
+make install-src;
+cat 'export PATH=$(pwd)/inst/bin:$PATH' >> ~/.bashrc

@@ -1,0 +1,28 @@
+-mismatch between classic spec documentatin and what is allowed (bad documnetation)
+eg: https://raw.githubusercontent.com/BSVLang/Main/master/Language_Spec/Bluespec_Classic.pdf
+   page 12: data Bool = False | True
+   this doesnt explain how to declare Bool, as it fails
+
+-bsc will have errors under some contexts
+   case (whatever)
+     0: let x = 1;
+     1: let x = 1;
+     2: let x = 1;
+     default: let x = 1;
+    end case
+    ^  this will make the compiler itself have an error
+
+-no documentation on how to use nested methods!!!!???
+
+-error messages identify the wrong issue, are completely useless if not confusing
+
+-Unexpected identifier `MASize_to_bytes'; expected `[' or function name
+     ---functions/methods HAVE to start with lowercase letter
+
+-bit access syntax too similiar to vector access syntax [20:20] vs [20], respectively
+
+- Cannot synthesize `mkPipeline': Its interface is polymorphic.
+   --seriously???
+       ---needs to be implemented as a module, only interfaces are polymorphic, not modules themselves
+
+-no warnings on repeated case statements!!!!!!
